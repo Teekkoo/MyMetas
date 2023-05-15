@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+
+    <TextView
+        android:id="@+id/getLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="TextView"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/addButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/filterSemana"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/secondary_color"
+        android:text="Semana"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/filterMes"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.333"></androidx.appcompat.widget.AppCompatButton>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/filterMes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/primary_color"
+        android:text="Mês"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/FilterAno"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.333"></androidx.appcompat.widget.AppCompatButton>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/FilterAno"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/secondary_color"
+        android:text="Ano"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.333"></androidx.appcompat.widget.AppCompatButton>
+
+    <View
+        android:id="@+id/my_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/tertiary_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/filterMes"></View>
+
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="48dp"
+        android:background="@color/off_color"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_baseline_arrow_left_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/filterSemana"></ImageButton>
+
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="12dp"
+        android:text="Mês: "
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/number"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/imageButton"
+        app:layout_constraintTop_toBottomOf="@+id/filterMes">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="80dp"
+        android:text=" 01"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton2"
+        app:layout_constraintTop_toBottomOf="@+id/filterMes">
+
+    </TextView>
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="48dp"
+        android:background="@color/off_color"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_baseline_arrow_right_24"
+        app:layout_constraintEnd_toEndOf="@+id/my_bar"
+        app:layout_constraintTop_toBottomOf="@+id/FilterAno"></ImageButton>
+
+    <View
+        android:id="@+id/divider1"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/primary_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/my_bar"></View>
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="397dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="8dp"
+        android:text="Titulo: Fazer um prototipo para materia de dispositivos moveis"
+        android:textColor="@color/primary_color"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/my_bar"></TextView>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="209dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="10dp"
+        android:text="Fazer até: 02/04/2024"
+        android:textColor="@color/text_color"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"></TextView>
+
+
+    <TextView
+        android:layout_width="140dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/status"
+        android:gravity="center"
+        android:text="Urgente"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"></TextView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/finalizarButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/button_primary"
+        android:ems="20"
+        android:text="Finalizar"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/excluirButton"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintWidth_percent="0.35" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/excluirButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="248dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/button_primary"
+        android:ems="20"
+        android:text="Excluir"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintWidth_percent="0.35" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/primary_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/finalizarButton"></View>
+
+    <View
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:background="@color/text_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"></View>
+
+    <ImageButton
+        android:id="@+id/homeButton"
+        android:layout_width="62dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="48dp"
+        android:background="@color/text_color"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_baseline_home_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"></ImageButton>
+
+    <ImageButton
+        android:id="@+id/addButton"
+        android:layout_width="92dp"
+        android:layout_height="92dp"
+        android:background="@color/off_color"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_baseline_add_circle_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/configButton"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toEndOf="@+id/homeButton"></ImageButton>
+
+    <ImageButton
+        android:id="@+id/configButton"
+        android:layout_width="62dp"
+        android:layout_height="62dp"
+        android:layout_marginEnd="48dp"
+        android:background="@color/text_color"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_baseline_brightness_high_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/footer"></ImageButton>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
