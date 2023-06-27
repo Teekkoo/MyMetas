@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistroActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Cadastrar Tarefa"
+            android:textColor="@color/text_color"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></TextView>
+
+        <TextView
+            android:id="@+id/textNome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="Nome:"
+            android:textColor="@color/primary_color"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/nome"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.134"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/nome"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="104dp"
+            android:background="@drawable/input"
+            android:ems="12"
+            android:hint="Nome"
+            android:inputType="text"
+            android:padding="12dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView2"
+            app:layout_constraintWidth_percent="0.8" />
+
+        <TextView
+            android:id="@+id/textDescricao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="Descrição:"
+            android:textColor="@color/primary_color"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/descricao"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.134"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/descricao"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="56dp"
+            android:background="@drawable/input"
+            android:ems="12"
+            android:hint="Descrição"
+            android:inputType="text"
+            android:padding="12dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nome"
+            app:layout_constraintWidth_percent="0.8" />
+
+        <TextView
+            android:id="@+id/textPrioridade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Prioridade"
+            android:textColor="@color/primary_color"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/groupRadio"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.117"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="0.766" />
+
+        <RadioGroup
+            android:id="@+id/groupRadio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="25dp"
+            app:layout_constraintBottom_toTopOf="@+id/finalizar"
+            app:layout_constraintTop_toBottomOf="@+id/descricao"
+            app:layout_constraintVertical_bias="0.6">
+
+            <RadioButton
+                android:id="@+id/radio_urgente"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Urgente"
+                android:textColor="@color/primary_color" />
+
+            <RadioButton
+                android:id="@+id/radio_moderada"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Moderada"
+                android:textColor="@color/primary_color" />
+
+            <RadioButton
+                android:id="@+id/radio_baixa"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Baixa"
+                android:textColor="@color/primary_color" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textFinalizar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Data de Finalização"
+            android:textColor="@color/primary_color"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/finalizar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.117"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="0.766" />
+
+        <DatePicker
+            android:id="@+id/finalizar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="128dp"
+            android:background="@drawable/input"
+            android:datePickerMode="calendar"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/descricao"
+            app:layout_constraintWidth_percent="0.8" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/cadastrar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/button_primary"
+            android:ems="20"
+            android:text="Cadastrar"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/finalizar"
+            app:layout_constraintWidth_percent="0.5" />
+
+        <View
+            android:id="@+id/footer"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:background="@color/text_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cadastrar"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageButton
+            android:id="@+id/homeButton"
+            android:layout_width="62dp"
+            android:layout_height="62dp"
+            android:layout_marginStart="48dp"
+            android:background="@color/text_color"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_baseline_home_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageButton
+            android:id="@+id/addButton"
+            android:layout_width="92dp"
+            android:layout_height="92dp"
+            android:background="@color/off_color"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_baseline_add_circle_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnSair"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toEndOf="@+id/homeButton"
+            app:layout_constraintTop_toBottomOf="@+id/cadastrar"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageButton
+            android:id="@+id/btnSair"
+            android:layout_width="62dp"
+            android:layout_height="62dp"
+            android:layout_marginEnd="48dp"
+            android:background="@color/text_color"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_baseline_brightness_high_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/footer" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

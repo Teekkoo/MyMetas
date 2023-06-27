@@ -3,143 +3,181 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:id="@+id/mainLayout"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="MyMetas"
-        android:textColor="@color/text_color"
-        android:textSize="60sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></TextView>
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="286dp"
-        android:layout_height="399dp"
-        android:layout_marginTop="40dp"
-        android:src="@drawable/logo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></ImageView>
-
-    <TextView
-        android:id="@+id/textEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
-        android:text="Email:"
-        android:textColor="@color/primary_color"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/email"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.134"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/email"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/filterSemana"
         android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="400dp"
-        android:background="@drawable/input"
-        android:ems="12"
-        android:hint="Email"
-        android:inputType="textEmailAddress"
-        android:padding="12dp"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="wrap_content"
+        android:background="@color/secondary_color"
+        android:text="Semana"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/filterMes"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintWidth_percent="0.8" />
-
-    <TextView
-        android:id="@+id/textSenha"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="Senha:"
-        android:textColor="@color/primary_color"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/senha"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.117"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email"
-        app:layout_constraintVertical_bias="0.766" />
-
-    <EditText
-        android:id="@+id/senha"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="44dp"
-        android:hint="Senha"
-        android:background="@drawable/input"
-        android:ems="12"
-        android:inputType="textPassword"
-        android:padding="12dp"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email"
-        app:layout_constraintWidth_percent="0.8" />
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.333"></androidx.appcompat.widget.AppCompatButton>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/login_button"
+        android:id="@+id/filterMes"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:background="@drawable/button_primary"
-        android:ems="20"
-        android:text="Entrar"
+        android:background="@color/primary_color"
+        android:text="Mês"
         android:textColor="@color/white"
-        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/FilterAno"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.333"></androidx.appcompat.widget.AppCompatButton>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/FilterAno"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/secondary_color"
+        android:text="Ano"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.333"></androidx.appcompat.widget.AppCompatButton>
+
+    <View
+        android:id="@+id/my_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/tertiary_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/senha"
-        app:layout_constraintWidth_percent="0.5" />
+        app:layout_constraintTop_toBottomOf="@+id/filterMes"></View>
+
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="48dp"
+        android:background="@color/off_color"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_baseline_arrow_left_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/filterSemana"></ImageButton>
 
     <TextView
-        android:id="@+id/cadastrese"
+        android:id="@+id/label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
-        android:text="Não Possui Conta?"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.352"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_button"
-        app:layout_constraintVertical_bias="1.0">
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="12dp"
+        android:text="Mês: "
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/number"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/imageButton"
+        app:layout_constraintTop_toBottomOf="@+id/filterMes">
 
     </TextView>
 
-
     <TextView
-        android:id="@+id/cadastre"
+        android:id="@+id/number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginBottom="40dp"
-        android:text="Cadastre-se"
-        android:textColor="@color/primary_color"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.12"
-        app:layout_constraintStart_toEndOf="@+id/cadastrese"
-        app:layout_constraintTop_toBottomOf="@+id/login_button"
-        app:layout_constraintVertical_bias="1.0"></TextView>
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="80dp"
+        android:text=" 01"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton2"
+        app:layout_constraintTop_toBottomOf="@+id/filterMes">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </TextView>
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="48dp"
+        android:background="@color/off_color"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_baseline_arrow_right_24"
+        app:layout_constraintEnd_toEndOf="@+id/my_bar"
+        app:layout_constraintTop_toBottomOf="@+id/FilterAno"></ImageButton>
+
+        <View
+            android:id="@+id/divider1"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@color/primary_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/my_bar"></View>
+    <ScrollView
+        android:layout_width="435dp"
+        android:layout_height="540dp"
+        app:layout_constraintBottom_toTopOf="@+id/addButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider1">
+
+        <LinearLayout
+            android:id="@+id/listaMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+        </LinearLayout>
+    </ScrollView>
+
+            <View
+                android:id="@+id/footer"
+                android:layout_width="match_parent"
+                android:layout_height="66dp"
+                android:background="@color/text_color"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"></View>
+
+            <ImageButton
+                android:id="@+id/homeButton"
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_marginStart="48dp"
+                android:background="@color/text_color"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_baseline_home_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"></ImageButton>
+
+            <ImageButton
+                android:id="@+id/addButton"
+                android:layout_width="92dp"
+                android:layout_height="92dp"
+                android:background="@color/off_color"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_baseline_add_circle_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btnSair"
+                app:layout_constraintHorizontal_bias="0.494"
+                app:layout_constraintStart_toEndOf="@+id/homeButton"></ImageButton>
+
+            <ImageButton
+                android:id="@+id/btnSair"
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_marginEnd="48dp"
+                android:background="@color/text_color"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_baseline_brightness_high_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/footer"></ImageButton>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>

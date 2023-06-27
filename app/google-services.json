@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "260599147105",
+    "project_id": "mymetas-d942b",
+    "storage_bucket": "mymetas-d942b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:260599147105:android:e05b06637d21e29b38d820",
+        "android_client_info": {
+          "package_name": "br.com.pdm.unemat.mymetas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "260599147105-v1qch0eau0n5ibd27schltstaj9pgknf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6mpPPSJI4NOB8so3bJf_CnHdkYnqbDhg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "260599147105-v1qch0eau0n5ibd27schltstaj9pgknf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
